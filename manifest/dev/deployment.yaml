@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: application
-          image: application_image
+          image: nuntakon/hellopython:172d785bfcd7014c84aa5110060c9324527dc53f
           imagePullPolicy: "IfNotPresent"
           ports:
             - containerPort: 80

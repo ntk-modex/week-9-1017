@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: group-5
+  namespace: group-5-ex
   name: week-9-tcc231017
 spec:
   selector:

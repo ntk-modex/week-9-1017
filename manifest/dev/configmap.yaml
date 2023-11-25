@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  namespace: group-5
+  namespace: group-5-ex
   name: week-9-tcc231017
 data:
   TZ: Asia/Bangkok

@@ -105,14 +105,14 @@ jobs:
       - name: Notify Result
         run: |# Add your notification logic here# For example, sending a notification to Slack or Discord
           echo "Workflow completed with status ${{ job.status }}"
-          
+
       - name: Commit and push changes
-              run: |
-                git config --local user.email "actions@github.com"
-                git config --local user.name "GitHub Actions"
-                git add deployment.yaml
-                git commit -m "bot: update deployment ${{ github.sha }}"
-                git push
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add deployment.yaml
+          git commit -m "bot: update deployment ${{ github.sha }}"
+          git push
 
 
 

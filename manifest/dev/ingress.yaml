@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  namespace: group-5
+  annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+  name: week-9-tcc231017
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: tcc-01.th1.proen.cloud
+      http:
+        paths:
+          - backend:
+              service:
+                name: week-9-tcc231017
+                port:
+                  number: 80
+            path: "/group-5/week-9-tcc231017(/|$)(.*)"
+            pathType: Prefix

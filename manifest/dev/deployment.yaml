@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: group-5
+  name: week-9-tcc231017
+spec:
+  selector:
+    matchLabels:
+      app: week-9-tcc231017
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: week-9-tcc231017
+    spec:
+      containers:
+        - name: application
+          image: application_image
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 80
+
+          envFrom:
+            - secretRef:
+                name: week-9-tcc231017
+            - configMapRef:
+                name: week-9-tcc231017

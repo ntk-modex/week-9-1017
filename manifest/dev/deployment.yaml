@@ -20,8 +20,8 @@ spec:
           ports:
             - containerPort: 80
 
-          envFrom:
-            - secretRef:
-                name: week-9-tcc231017
-            - configMapRef:
-                name: week-9-tcc231017
+          # envFrom:
+          #   - secretRef:
+          #       name: week-9-tcc231017
+          #   - configMapRef:
+          #       name: week-9-tcc231017

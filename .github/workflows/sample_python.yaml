@@ -2,12 +2,12 @@ name: "CodeQL and Docker"
 
 on:
   push:
-    branches: ["develop"]
+    branches: ["dev"]
   workflow_dispatch:
 
-defaults:
-  run:
-    working-directory: ./application/sample_csharp
+# defaults:
+#   run:
+#     working-directory: ./application/sample_csharp
 
 jobs:
   # analyze:
